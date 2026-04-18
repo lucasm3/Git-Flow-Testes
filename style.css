@@ -1,0 +1,35 @@
+body {
+    font-family: Optima, sans-serif;
+    background: #33024a;
+}
+
+.container {
+    width: 300px;
+    margin: 100px auto;
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+}
+
+h1 {
+     white-space: nowrap;
+}
+
+input {
+    width: 93.5%;
+    margin: 10px 0;
+    padding: 8px;
+}
+
+button {
+    width: 100%;
+    padding: 10px;
+    background: #33024a;
+    color: white;
+    border: none;
+}
+
+#mensagem {
+    text-align: center;
+    margin-top: 10px;
+}
