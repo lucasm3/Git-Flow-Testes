@@ -1,70 +1,86 @@
 # Git-Flow-Testes
 
+##  Comandos principais do Git
 
-Configuração inicial:
-git config --global user.name "Seu Nome"
-git config --global user.email "seu@email.com"
+###  Clonar repositório
+git clone <url>
 
-Clonar repositório:
-git clone <url-do-repositorio>
-cd nome-do-repositorio
+###  Inicializar repositório
+git init
 
-Verificar status:
+###  Ver status
 git status
 
-Adicionar arquivos:
-git add arquivo.txt
+###  Adicionar arquivos
 git add .
+git add nome-do-arquivo
 
-Criar commit:
+###  Criar commit
 git commit -m "mensagem do commit"
 
-Enviar para o repositório:
+###  Enviar para o GitHub
 git push origin main
 
-Atualizar repositório:
+###  Atualizar repositório
 git pull origin main
 
-Criar branch:
-git checkout -b nome-da-branch
+---
 
-Trocar de branch:
-git checkout nome-da-branch
+##  Branches
 
-Listar branches:
-git branch
+### Criar branch
+git branch nome-branch
 
-Deletar branch:
-git branch -d nome-da-branch
+### Trocar de branch
+git checkout nome-branch
 
-Ver histórico:
-git log
-git log --oneline
+### Criar e trocar ao mesmo tempo
+git checkout -b nome-branch
 
-Corrigir commit:
-git commit --amend
+### Deletar branch
+git branch -d nome-branch
 
-Desfazer commit mantendo alterações:
+---
+
+##  Merge
+
+git merge nome-da-branch
+
+---
+
+##  Correções de commits
+
+### Alterar último commit
+git commit --amend -m "nova mensagem"
+
+### Remover arquivo do commit
+git reset HEAD nome-do-arquivo
+
+### Voltar commit
 git reset --soft HEAD~1
-
-Desfazer commit apagando tudo:
 git reset --hard HEAD~1
 
-Ignorar arquivos (.gitignore):
-node_modules/
-.env
+---
 
-GitFlow (conceito):
-main -> produção
-develop -> desenvolvimento
-feature -> novas funcionalidades
-release -> preparação de versão
-hotfix -> correções urgentes
+##  Envio de branch
 
-Exemplo GitFlow:
-git checkout develop
-git checkout -b feature/login
-git checkout develop
-git merge feature/login
-git branch -d feature/login
+git push origin nome-branch
 
+---
+
+##  Git Flow (conceito básico)
+
+- main → produção
+- develop → desenvolvimento
+- feature → novas funcionalidades
+- hotfix → correções urgentes
+
+---
+
+##  Fluxo básico GitFlow
+
+1. Criar branch develop
+2. Criar feature a partir de develop
+3. Desenvolver
+4. Merge na develop
+5. Enviar para main quando pronto
